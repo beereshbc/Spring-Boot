@@ -2,13 +2,13 @@ package com.springboot.springboot;
 
 import java.util.Objects;
 
-public class SoftwareEngneer {
+public class SoftwareEngineer {
 
     private Integer id;
     private String name;
     private  String TechStack;
 
-    public SoftwareEngneer(Integer id, String name, String techStack) {
+    public SoftwareEngineer(Integer id, String name, String techStack) {
         this.id = id;
         this.name = name;
         TechStack = techStack;
@@ -41,7 +41,7 @@ public class SoftwareEngneer {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        SoftwareEngneer that = (SoftwareEngneer) o;
+        SoftwareEngineer that = (SoftwareEngineer) o;
         return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(TechStack, that.TechStack);
     }
 
