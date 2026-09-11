@@ -1,9 +1,14 @@
 package com.springboot.springboot;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.util.Objects;
 
+@Entity
 public class SoftwareEngineer {
 
+    @Id
     private Integer id;
     private String name;
     private  String TechStack;
@@ -12,6 +17,10 @@ public class SoftwareEngineer {
         this.id = id;
         this.name = name;
         TechStack = techStack;
+    }
+
+    public SoftwareEngineer() {
+
     }
 
     public Integer getId() {
