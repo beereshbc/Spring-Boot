@@ -13,7 +13,6 @@ public class SoftwareEngineerService {
     public SoftwareEngineerService(SoftwareEngineerRepository softwareEngineerRepository) {
       this.SoftwareEngineerRepository = softwareEngineerRepository;
     }
-
     public List<SoftwareEngineer> getAllSoftwareEngineer(){
         return SoftwareEngineerRepository.findAll();
     }
@@ -22,5 +21,9 @@ public class SoftwareEngineerService {
 
         SoftwareEngineerRepository.save(softwareEngineer);
 
+    }
+
+    public SoftwareEngineer getSoftwareEngineerById(Integer id) {
+        return SoftwareEngineerRepository.findById(id).orElseThrow(()-> new RuntimeException("Software Engineer Not Found"));
     }
 }
